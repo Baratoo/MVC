@@ -1,0 +1,19 @@
+unit Model.Itens;
+
+interface
+
+uses
+  Model.Interfaces;
+
+type
+  TModelItens = class(TInterfacedObject, IModelItens)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IModelItens;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,39 @@
+unit Controller.Itens;
+
+interface
+
+uses
+  Controller.Interfaces;
+
+type
+  TControllerItens = class(TInterfacedObject, IControllerItens)
+    private
+      [weak]//Evitar vazamento de memória
+      FParent : IControllerVendas;
+    public
+      constructor Create(Parent : IControllerVendas);
+      destructor Destroy; override;
+      class function New(Parent : IControllerVendas) : IControllerItens;//Injeção de Dependencia
+  end;
+
+implementation
+
+{ TControllerItens }
+
+constructor TControllerItens.Create(Parent : IControllerVendas);
+begin
+  FParent := Parent;
+end;
+
+destructor TControllerItens.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerItens.New(Parent : IControllerVendas) : IControllerItens;
+begin
+  Result := Self.Create(Parent);
+end;
+
+end.

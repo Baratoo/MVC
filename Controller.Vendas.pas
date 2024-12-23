@@ -1,0 +1,47 @@
+unit Controller.Vendas;
+
+interface
+
+uses
+  Controller.Interfaces;
+
+type
+  TControllerVenda = class(TInterfacedObject, IControllerVendas)
+    private
+      FItem : IControllerItens;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IControllerVendas;
+      function Item : IControllerItens;
+  end;
+
+implementation
+
+uses
+  Controller.Itens;
+
+{ TControllerVenda }
+
+constructor TControllerVenda.Create;
+begin
+  FItem := TControllerItens.New(Self);
+end;
+
+destructor TControllerVenda.Destroy;
+begin
+
+  inherited;
+end;
+
+function TControllerVenda.Item: IControllerItens;
+begin
+  Result := FItem;
+end;
+
+class function TControllerVenda.New: IControllerVendas;
+begin
+  Result := Self.Create;
+end;
+
+end.

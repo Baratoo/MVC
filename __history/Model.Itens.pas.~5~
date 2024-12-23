@@ -1,0 +1,40 @@
+unit Model.Itens;
+
+interface
+
+uses
+  Model.Interfaces;
+
+type
+  TModelItens = class(TInterfacedObject, IModelItens)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IModelItens;
+      function Codigo (Value : Integer) : IModelItens;
+      function Vender : IModelItens;
+      function &End : IModelVenda;
+  end;
+
+implementation
+
+{ TModelItens }
+
+constructor TModelItens.Create;
+begin
+
+end;
+
+destructor TModelItens.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItens.New: IModelItens;
+begin
+  Result := Self.Create;
+end;
+
+end.

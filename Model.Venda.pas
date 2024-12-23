@@ -1,0 +1,45 @@
+unit Model.Venda;
+
+interface
+
+uses
+  Model.Interfaces, Model.Itens;
+
+type
+  TModelVenda = class(TInterfacedObject, IModelVenda)
+    private
+      FItem : TModelItens;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IModelVenda;
+      function Item : IModelItens;
+  end;
+
+implementation
+
+{ TModelVenda }
+
+constructor TModelVenda.Create;
+begin
+  FItem := TModelItens.Create(Self);
+end;
+
+destructor TModelVenda.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelVenda.Item: IModelItens;
+begin
+  Result := FItem;
+end;
+
+class function TModelVenda.New: IModelVenda;
+begin
+  Result := Self.Create;
+end;
+
+
+end.

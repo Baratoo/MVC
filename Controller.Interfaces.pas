@@ -13,7 +13,7 @@ type
 
   IControllerItens = interface
     ['{47780DE9-359F-445E-9346-C3F4BF02CB64}']
-    function Codigo (Value : Integer) : IControllerVendas;
+    function Codigo (Value : Integer) : IControllerItens;
     function Vender : IControllerItens;
     function &End : IControllerVendas;
   end;

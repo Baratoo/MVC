@@ -15,7 +15,7 @@ type
       constructor Create(Parent : IControllerVendas);
       destructor Destroy; override;
       class function New(Parent : IControllerVendas) : IControllerItens;//Injeção de Dependencia
-      function Codigo (Value : Integer) : IControllerVendas;
+      function Codigo (Value : Integer) : IControllerItens;
       function Vender : IControllerItens;
       function &End : IControllerVendas;
   end;
@@ -24,7 +24,7 @@ implementation
 
 { TControllerItens }
 
-function TControllerItens.Codigo(Value: Integer): IControllerVendas;
+function TControllerItens.Codigo(Value: Integer): IControllerItens;
 begin
   Result := Self;
   FCodigo := Value;

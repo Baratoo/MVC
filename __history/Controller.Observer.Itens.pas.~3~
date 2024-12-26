@@ -1,0 +1,37 @@
+unit Controller.Observer.Itens;
+
+interface
+
+uses
+  Controller.Observer.Interfaces;
+
+type
+  TControllerObserverItem = class(TInterfacedObject, ISubjectItem)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : ISubjectItem;
+  end;
+
+implementation
+
+{ TControllerObserverItem }
+
+constructor TControllerObserverItem.Create;
+begin
+
+end;
+
+destructor TControllerObserverItem.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerObserverItem.New: ISubjectItem;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -1,0 +1,52 @@
+ unit Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Controller.Interfaces, Controller.Observer.Interfaces;
+
+type
+  TForm2 = class(TForm, IObserverItem)
+    Panel1: TPanel;
+    Edit1: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+    FVenda : IControllerVendas;
+    procedure VenderItem;
+    function UpdateItem(Value : TRecordItem) : IObserverItem;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses
+  Controller.Vendas;
+
+{$R *.dfm}
+
+procedure TForm2.Edit1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = 13 then
+    VenderItem;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  FVenda := TControllerVenda.New;
+end;
+
+procedure TForm2.VenderItem;
+begin
+  FVenda.Item.Codigo(StrToInt(Edit1.Text)).Vender;
+end;
+
+end.

@@ -30,7 +30,6 @@ end;
 
 destructor TModelVenda.Destroy;
 begin
-
   inherited;
 end;
 

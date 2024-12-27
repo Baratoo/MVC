@@ -54,7 +54,7 @@ end;
 
 class function TControllerVenda.New: IControllerVendas;
 begin
-  Result := Self.Create;
+  Result := TControllerVenda.Create;
 end;
 
 function TControllerVenda.ObserverItem: ISubjectItem;

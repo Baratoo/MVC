@@ -9,8 +9,8 @@
     <Transaction>2023/12/07 10:08:04.000.285,=C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>2024/04/02 17:07:52.000.644,=C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>2024/12/23 15:05:44.000.434,=C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2024/12/23 15:07:23.000.996,C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.dfm=E:\KaiqueBarato\MVC\Principal.dfm</Transaction>
     <Transaction>2024/12/23 15:07:23.000.996,C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.pas=E:\KaiqueBarato\MVC\Principal.pas</Transaction>
+    <Transaction>2024/12/23 15:07:23.000.996,C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Unit2.dfm=E:\KaiqueBarato\MVC\Principal.dfm</Transaction>
     <Transaction>2024/12/23 15:07:38.000.293,C:\Users\Win7\Documents\Embarcadero\Studio\Projects\Project2.dproj=E:\KaiqueBarato\MVC\MVC.dproj</Transaction>
     <Transaction>2024/12/23 15:08:50.000.965,=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
     <Transaction>2024/12/23 15:08:58.000.606,E:\KaiqueBarato\MVC\Unit1.pas=E:\KaiqueBarato\MVC\Controller.Interfaces.pas</Transaction>
@@ -28,5 +28,20 @@
     <Transaction>2024/12/26 09:17:53.287,E:\KaiqueBarato\MVC\Controller.Observer.Interfaces.pas=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
     <Transaction>2024/12/26 10:01:00.006,=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
     <Transaction>2024/12/26 10:01:14.818,E:\KaiqueBarato\MVC\Controller.Observer.Itens.pas=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
+    <Transaction>2024/12/26 10:58:07.197,=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
+    <Transaction>2024/12/26 10:58:21.119,E:\KaiqueBarato\MVC\Tela2.dfm=E:\KaiqueBarato\MVC\Unit1.dfm</Transaction>
+    <Transaction>2024/12/26 10:58:21.119,E:\KaiqueBarato\MVC\Tela2.pas=E:\KaiqueBarato\MVC\Unit1.pas</Transaction>
+    <Transaction>2024/12/26 13:26:21.876,E:\KaiqueBarato\MVC\Controller\Controller.Interfaces.pas=E:\KaiqueBarato\MVC\Controller.Interfaces.pas</Transaction>
+    <Transaction>2024/12/26 13:26:29.985,E:\KaiqueBarato\MVC\Controller\Controller.Itens.pas=E:\KaiqueBarato\MVC\Controller.Itens.pas</Transaction>
+    <Transaction>2024/12/26 13:26:37.767,E:\KaiqueBarato\MVC\Controller\Controller.Observer.Interfaces.pas=E:\KaiqueBarato\MVC\Controller.Observer.Interfaces.pas</Transaction>
+    <Transaction>2024/12/26 13:26:43.157,E:\KaiqueBarato\MVC\Controller\Controller.Observer.Itens.pas=E:\KaiqueBarato\MVC\Controller.Observer.Itens.pas</Transaction>
+    <Transaction>2024/12/26 13:26:50.376,E:\KaiqueBarato\MVC\Controller\Controller.Vendas.pas=E:\KaiqueBarato\MVC\Controller.Vendas.pas</Transaction>
+    <Transaction>2024/12/26 13:26:55.970,E:\KaiqueBarato\MVC\Model\Model.Interfaces.pas=E:\KaiqueBarato\MVC\Model.Interfaces.pas</Transaction>
+    <Transaction>2024/12/26 13:27:01.923,E:\KaiqueBarato\MVC\Model\Model.Itens.pas=E:\KaiqueBarato\MVC\Model.Itens.pas</Transaction>
+    <Transaction>2024/12/26 13:27:09.782,E:\KaiqueBarato\MVC\Model\Model.Venda.pas=E:\KaiqueBarato\MVC\Model.Venda.pas</Transaction>
+    <Transaction>2024/12/26 13:28:01.548,E:\KaiqueBarato\MVC\View\View.Principal.dfm=E:\KaiqueBarato\MVC\Principal.dfm</Transaction>
+    <Transaction>2024/12/26 13:28:01.548,E:\KaiqueBarato\MVC\View\View.Principal.pas=E:\KaiqueBarato\MVC\Principal.pas</Transaction>
+    <Transaction>2024/12/26 13:28:13.564,E:\KaiqueBarato\MVC\View\View.Tela2.pas=E:\KaiqueBarato\MVC\Tela2.pas</Transaction>
+    <Transaction>2024/12/26 13:28:13.564,E:\KaiqueBarato\MVC\View\View.Tela2.dfm=E:\KaiqueBarato\MVC\Tela2.dfm</Transaction>
   </Transactions>
 </BorlandProject>

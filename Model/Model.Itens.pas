@@ -8,6 +8,7 @@ uses
 type
   TModelItens = class(TInterfacedObject, IModelItens)
     private
+      [weak]
       FParent : IModelVenda;
       FCodigo : Integer;
     public
@@ -22,7 +23,7 @@ type
 implementation
 
 uses
-  Controller.Observer.Interfaces;
+  Controller.Observer.Interfaces, System.SysUtils;
 
 { TModelItens }
 
@@ -44,7 +45,7 @@ end;
 
 destructor TModelItens.Destroy;
 begin
-
+  FParent := nil;
   inherited;
 end;
 
@@ -60,12 +61,13 @@ begin
   Result := Self;
 
   case FCodigo of
-  0: RI.Descricao := 'Arroz';
-  1: RI.Descricao := 'Feijão';
-  2: RI.Descricao := 'Macarrão';
+    0: RI.Descricao := 'Arroz';
+    1: RI.Descricao := 'Feijão';
+    2: RI.Descricao := 'Macarrão';
   end;
 
   FParent.ObserverItem.Notify(RI);
+
 end;
 
 end.

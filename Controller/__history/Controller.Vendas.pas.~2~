@@ -1,0 +1,65 @@
+unit Controller.Vendas;
+
+interface
+
+uses
+  Controller.Interfaces, Model.Interfaces, Model.Venda,
+  Controller.Observer.Interfaces;
+
+type
+  TControllerVenda = class(TInterfacedObject, IControllerVendas)
+    private
+      FItem : IControllerItens;
+      FModel : IModelVenda;
+      FObserverItem : ISubjectItem;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IControllerVendas;
+      function Item : IControllerItens;
+      function Model : IModelVenda;
+      function ObserverItem : ISubjectItem;
+  end;
+
+implementation
+
+uses
+  Controller.Itens, Controller.Observer.Itens, System.SysUtils;
+
+{ TControllerVenda }
+
+constructor TControllerVenda.Create;
+begin
+  FModel := TModelVenda.New;
+  FObserverItem := TControllerObserverItem.New;
+  FItem := TControllerItens.New(Self);
+  FModel.ObserverItem(FObserverItem);
+end;
+
+destructor TControllerVenda.Destroy;
+begin
+  inherited;
+end;
+
+function TControllerVenda.Item: IControllerItens;
+begin
+  Result := FItem;
+end;
+
+
+function TControllerVenda.Model: IModelVenda;
+begin
+  Result := FModel;
+end;
+
+class function TControllerVenda.New: IControllerVendas;
+begin
+  Result := TControllerVenda.Create;
+end;
+
+function TControllerVenda.ObserverItem: ISubjectItem;
+begin
+  Result := FObserverItem;
+end;
+
+end.

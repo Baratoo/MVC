@@ -3,7 +3,7 @@
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
   Controller.Interfaces, Controller.Observer.Interfaces;
 
@@ -31,7 +31,7 @@ var
 implementation
 
 uses
-  Controller.Vendas, Tela2;
+  Controller.Vendas, View.Tela2, System.SysUtils;
 
 {$R *.dfm}
 
@@ -53,8 +53,6 @@ begin
   FVenda := TControllerVenda.New;
   FVenda.ObserverItem.Add(Self);
 end;
-
-
 
 function TForm2.UpdateItem(Value: TRecordItem): IObserverItem;
 begin
